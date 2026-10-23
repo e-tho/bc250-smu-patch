@@ -1,0 +1,16 @@
+[package]
+name = "bc250-smu-patch"
+version = "0.1.0"
+edition = "2021"
+description = "Patch the AMD BC-250 SMU firmware"
+repository = "https://github.com/e-tho/bc250-smu-patch"
+license = "MIT"
+
+[dependencies]
+
+[profile.release]
+opt-level = "s"
+strip = true
+lto = true
+panic = "abort"
+codegen-units = 1
